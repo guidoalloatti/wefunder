@@ -101,3 +101,9 @@ System Functionality Explained
   - You can get back to the decks.
   - You can delete this previously created deck.
   - You can go to add a new version for the pitch deck.
+
+Architecture Design
+-----------------
+![alt text](https://i.ibb.co/4gzbHCT/Screen-Shot-2021-07-20-at-03-44-32.png)
+
+
