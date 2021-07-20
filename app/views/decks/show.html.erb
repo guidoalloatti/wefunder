@@ -1,0 +1,25 @@
+<div class="container-fluid pitch-deck-show-main">
+  <h1>
+    <%= @deck.company %> (ID: <%= @deck.id %>)
+    <%= link_to "Back to Decks", decks_path, class: "btn btn-primary back-show-deck-button" %>
+    <%= link_to "Upload new version", new_deck_path, class: "btn btn-primary upload-new-deck-button" %>
+    <%= link_to "Delete Version", deck_path(@deck.id), :data => { :confirm => 'Are you sure?' }, :method => :delete, class: "btn btn-primary show-delete-deck-button" %>
+  </h1>
+  <h5>
+    <div class="show-details">
+      &#x2609; <strong>Project:</strong> <%= @deck.project %> <br>
+      &#x2609; <strong>Version:</strong> <%= @deck.version %> <br>
+      &#x2609; <strong>Pages:</strong> <%= @deck.images.size %> <br>
+      &#x2609; <strong>Created:</strong> <%= distance_of_time_in_words(Time.now, @deck.created_at) %> ago. <br>
+      &#x2609; <strong>Original File:</strong> <%= link_to @deck.pitch_deck_file_name, download_path(:filename => @deck.pitch_deck_file_name), target: '_self' %>
+    </div>
+  </h5>
+  <hr>
+
+  <% @deck.images.each_with_index do |image, index| %>
+    <img src="<%= image.filename %>" class="pitch-deck-image">
+    <div class="image-index"><%= index+1 %></div>
+    <br>
+  <% end %>
+
+</div>

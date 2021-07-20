@@ -1,0 +1,41 @@
+<div class="container-fluid main">
+  <h1>Pitch Decks (Count: <%= @decks.size %>)</h1>
+  <%= link_to "Upload Pitch Deck", new_deck_path, class: "btn btn-primary new-deck-button" %>
+  <hr>
+
+  <% @decks.each do |deck| %>
+    <div class="deck-details">
+      <h3><strong><%= deck.company %></strong> (ID: <%= deck.id %>)</h3>
+      <hr>
+      <div class="deck-details-line">
+        <p class="deck-title-text">Project:</p>
+        <p class="deck-details-text"><%= deck.project %></p>
+      </div>
+
+      <div class="deck-details-line">
+        <p class="deck-title-text">Uploaded File:</p>
+        <p class="deck-details-text"><%= link_to deck.pitch_deck_file_name, download_path(:filename => deck.pitch_deck_file_name), target: '_self' %></p>
+      </div>
+
+      <div class="deck-details-line">
+        <p class="deck-title-text">Created:</p>
+        <p class="deck-details-text"><%= distance_of_time_in_words(Time.now, deck.created_at) %> ago.</p>
+      </div>
+
+      <div class="deck-details-line">
+        <p class="deck-title-text">Version:</p>
+        <p class="deck-details-text"><%= deck.version %></p>
+      </div>
+      
+      <div class="deck-details-line">
+        <p class="deck-title-text">Images:</p>
+        <p class="deck-details-text"><%= deck.images.size %></p>
+      </div>
+
+      <hr>
+
+      <%= link_to "Show Pitch Deck", deck_path(deck.id), class: "btn btn-primary show-deck-button" %>
+      <%= link_to "Delete", deck_path(deck.id), :data => { :confirm => 'Are you sure?' }, :method => :delete, class: "btn btn-primary delete-deck-button" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+
+.main {
+  width: 900px;
+  color: #FFF;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: rgb(70, 70, 70);
+}
+
+.pitch-deck-show-main {
+  width: 1210px;
+  color: #FFF;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: rgb(70, 70, 70);
+}
+
+.pitch-deck-image {
+  z-index: 1;
+}
+
+.upload-new-deck-button {
+  float: right;
+  margin-top: 55px;
+  margin-right: -131px;
+}
+
+.image-index {
+  margin-right: 15px;
+  margin-top: -45px;
+  float: right;
+  background: #FFF;
+  z-index: 2;
+  color: gray;
+  padding: 10px 15px;
+  border-radius: 20px 20px 0 0 ;
+  position: relative;
+  border: 1px solid gray;
+}
+
+.deck-details-line {
+  line-height: 10px;
+}
+
+.deck-details-text {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.deck-title-text {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.new-deck-button {
+  margin-top: -55px;
+  float: right;
+}
+
+.delete-deck-button {
+  float: left;
+  background: red;
+  border: 0px solid red;
+}
+
+.deck-details {
+  display: inline-block;
+  color: gray;
+  margin: 20px;
+  padding: 20px;
+  background: #e6e6e6;
+  border-radius: 5px;
+  width: 44%;
+  height: 330px;
+}
+
+.submit-button {
+  float: right;
+}
+
+.new-show-deck-button {
+  margin-top: -52px;
+  margin-right: 7px;
+  float: right;
+  height: 28px;
+  font-size: 0.7rem;
+  border: 0;
+  color: #FFF;
+  font-weight: 700;
+}
+
+
+.back-show-deck-button {  
+  float: right;
+  background-color: #b0b0b0;
+  border: 0;
+}
+
+.show-deck-button {
+  float: right;
+}
+
+.back-button {
+  float: right;
+  background-color: #b0b0b0;
+  border: 0;
+  margin-top: 5px;
+}
+
+.error-message {
+  background: red;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.success-message {
+  background: green;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.show-delete-deck-button {
+  float: right;
+  margin-top: 111px;
+  margin-right: -167px;
+  background: red;
+  border: 0;
+}
+
+.show-details {
+  padding-left: 10px;
+}

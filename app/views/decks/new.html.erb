@@ -1,0 +1,42 @@
+<div class="container-fluid main">
+  <% if flash[:error] %>
+    <p id="error" class="error-message"><%= flash[:error] %></p>
+  <% end %>
+
+  <% if flash[:success] %>
+    <p id="success" class="success-message"><%= flash[:success] %></p>
+    <%= link_to "Show new Pitch Deck", deck_path(@deck_id), class: "btn btn-info new-show-deck-button" %>
+  <% end %>
+
+  <h1>
+    New Pitch Deck Submission
+    <%= link_to "Back to Decks", decks_path, class: "btn btn-primary back-button" %>
+  </h1>
+  <hr>
+  <div>
+
+  <%= form_for @deck, :url => {:action => "upload"}, method: 'post' do |f| %>
+    <div class="row g-3">
+      <div class="col">
+        <%= f.text_field :project, required: true, class: 'form-control', placeholder: "Project Name" %>
+      </div>
+      <div class="col">
+        <%= f.text_field :company, required: true, class: 'form-control', placeholder: "Company Name" %>
+      </div>
+      <div class="col">
+        <%= f.text_field :version, required: true, class: 'form-control', placeholder: "Pitch Deck Version" %>
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Please upload your pitch desk</label>
+        <%= f.file_field :file, :class => "form-control", :required => true, :accept => '.pdf, .ppt, .pptx', help: "File formats valid are: .pdf, .ppt and .pptx" %>
+      </div>
+    </div>
+      
+    <hr>
+    
+    <%= submit_tag "Upload Deck", class: "btn btn-primary submit-button" %>
+    <br>
+
+  <% end %>
+</div>
+
