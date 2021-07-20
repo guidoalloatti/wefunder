@@ -7,12 +7,12 @@ We want to make raising money on Wefunder as simple as possible, so we allow fou
 
 You can see an example of this on Wefunder's own company profile (we dogfood our own product to raise our rounds): https://wefunder.com/wefunder
 
-- The Challenge
+## The Challenge
 Build a tool that allows a user to upload their pitch deck and display it on a web page.
 At a minimum, you should have:
-A web page that allows a user to upload a file as a PDF. Bonus points for supporting PPT and other formats too.
-A backend that takes the uploaded file and generates an image for each slide.
-A web page that displays the deck using the image of each slide, like on the Wefunder profile page.
+- A web page that allows a user to upload a file as a PDF. Bonus points for supporting PPT and other formats too.
+- A backend that takes the uploaded file and generates an image for each slide.
+- A web page that displays the deck using the image of each slide, like on the Wefunder profile page.
 
 You don't have to worry about user accounts or supporting multiple company profile pages. It's OK if the display page simply shows the last deck that was uploaded to the upload page.
 
@@ -51,7 +51,10 @@ Chanllenge Resolution Explanation
 
 Installations Steps
 ----------------
-- Install and Set rails version to `2.6.2` (rbenv or rvm)
+- Install and Set `ruby` version to `2.7.3` (rbenv or rvm)
+- `Rails` Version: 5.2.6
+- Default database adapter is `Postgresql`
+
 - Run: `$ bundle install`
 - Run: `$ rake db:create`
 - Run: `$ rake db:migrate`
@@ -80,7 +83,7 @@ Visit the page
 System Functionality Explained
 ----------------
 
-# Index
+## Index
   - You can see all the details for the Pitch Decks created from the main index page.
   - You can create new decks by accesing the Upload page from the index.
   - You can delete previously created decks from the index.
@@ -92,7 +95,7 @@ System Functionality Explained
   - You can get back to decks page.
   - You can access the newly created deck details after created.
 
-# Deck Details
+## Deck Details
   - You can see all the relevant information regarding the pitch deck in this page.
   - You can see the images extracted from the uploaded file.
   - You can get back to the decks.
