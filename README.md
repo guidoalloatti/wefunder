@@ -84,18 +84,21 @@ System Functionality Explained
 ----------------
 
 ## Index
+![alt text](https://i.ibb.co/3CwTyJs/Screen-Shot-2021-07-20-at-03-46-35.png)
   - You can see all the details for the Pitch Decks created from the main index page.
   - You can create new decks by accesing the Upload page from the index.
   - You can delete previously created decks from the index.
   - You can see the details for a deck.
 
 # Upload
+![alt text](https://i.ibb.co/f0QFfk2/Screen-Shot-2021-07-20-at-03-47-19.png)
   - You can fill the form with some basic information.
   - You can upload a file with a *pdf/ppt/pptx* format with the pitch deck details.
   - You can get back to decks page.
   - You can access the newly created deck details after created.
 
 ## Deck Details
+![alt text](https://i.ibb.co/mGKdr00/Screen-Shot-2021-07-20-at-03-46-49.png)
   - You can see all the relevant information regarding the pitch deck in this page.
   - You can see the images extracted from the uploaded file.
   - You can get back to the decks.
